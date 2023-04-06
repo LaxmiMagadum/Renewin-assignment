@@ -1,3 +1,5 @@
+// Name : Laxmi magadum
+// USN : 4SU19CS045
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -50,7 +52,7 @@ void insert_node(char *name, bool is_directory) {
       }
     }
   }
-}
+}// the function sets the empty child node to the new node, completing the insertion process.
 
 // Function to find the minimum node in the right subtree of a node to be
 // deleted
@@ -86,7 +88,7 @@ struct file_node *delete_node(struct file_node *node, char *name) {
     node->is_directory = temp_node->is_directory;
     node->right_child = delete_node(node->right_child, temp_node->name);
   }
-  return node;
+  return node;//The function returns a pointer to the root node of the modified binary search tree.
 }
 
 // Function to search for a file or directory node by name
@@ -199,7 +201,7 @@ int main() {
   char input[100];
   while (true) {
     printf("Enter command: ");
-    fgets(input, sizeof(input), stdin);
+    fgets(input, sizeof(input), stdin);//used to take user input from keyboard
     if (strcmp(input, "exit\n") == 0) {
       break;
     }
